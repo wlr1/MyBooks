@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-pastele min-h-full min-w-full
+}
+ /*grid place-items-center h-screen*/
+ /*flex items-center justify-center h-screen bg-amber-500  max-w-3xl*/
+ /*flex items-center justify-center*/
+/*flex flex-col h-screen*/
