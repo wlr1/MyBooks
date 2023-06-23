@@ -11,9 +11,6 @@ const Home: React.FC = () => {
         </h2>
         <Search />
       </div>
-      {/*<div className="content__error-info">*/}
-      {/*  <h2>Something goes wrong!</h2>*/}
-      {/*</div>*/}
       <div className="">
         <Books />
       </div>

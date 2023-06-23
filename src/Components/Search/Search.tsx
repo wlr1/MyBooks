@@ -3,14 +3,10 @@ import { searchBooks } from "../../redux/books/asyncActions";
 import { setBook } from "../../redux/books/slice";
 import { useSelector, useDispatch } from "react-redux";
 import store, { RootState } from "../../redux/store";
-import { Root } from "react-dom/client";
 
 const Search: React.FC = () => {
   const dispatch = useDispatch<typeof store.dispatch>();
   const book = useSelector((state: RootState) => state.book.book);
-  const result = useSelector((state: RootState) => state.book.result);
-  const error = useSelector((state: RootState) => state.book.error);
-  const loading = useSelector((state: RootState) => state.book.loading);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const book = e.target.value;
