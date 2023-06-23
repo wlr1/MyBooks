@@ -17,11 +17,16 @@ const Books: React.FC = () => {
         books.map((book) => (
           <div key={book.id} className="w-56">
             <img
-              className="w-56 mb-2"
+              className="w-56 h-72 mb-2"
               src={book.volumeInfo.imageLinks?.thumbnail}
               alt="books"
             />
-            <h4 className="">{book.volumeInfo.title}</h4>
+            //if length is higher 25 then display ... otherwise title
+            <h4 className="font-bold ">
+              {book.volumeInfo.title.length > 25
+                ? `${book.volumeInfo.title.slice(0, 25)}...`
+                : book.volumeInfo.title}
+            </h4>
           </div>
         ))
       )}
