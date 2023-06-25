@@ -16,11 +16,13 @@ const Books: React.FC = () => {
       ) : (
         books.map((book) => (
           <div key={book.id} className="w-64 h-96  shadow-2xl">
-            <img
-              className="w-64 h-72 mb-2"
-              src={book.volumeInfo.imageLinks?.thumbnail}
-              alt="books"
-            />
+            <a href={book.volumeInfo.infoLink} target="_blank">
+              <img
+                className="w-64 h-72 mb-2"
+                src={book.volumeInfo.imageLinks?.thumbnail}
+                alt="books"
+              />
+            </a>
 
             <h4 className="font-bold mt-4 w-64 text-center">
               {book.volumeInfo.title.length > 21
