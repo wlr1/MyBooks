@@ -1,6 +1,7 @@
 export interface Book {
   id: string;
   volumeInfo: {
+    infoLink: string;
     imageLinks?: {
       thumbnail: string;
     };
