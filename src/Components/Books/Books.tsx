@@ -24,11 +24,14 @@ const Books: React.FC = () => {
               />
             </a>
 
-            <h4 className="font-bold mt-4 w-64 text-center">
+            <h4 className="font-bold  font-lato mt-4 w-64 text-center text-purple-drk">
               {book.volumeInfo.title.length > 21
                 ? `${book.volumeInfo.title.slice(0, 21)}...`
                 : book.volumeInfo.title}
             </h4>
+            <span className="font-lato ml-1 text-gray-drk">
+              Pages: {book.volumeInfo.pageCount}
+            </span>
           </div>
         ))
       )}

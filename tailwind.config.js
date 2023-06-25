@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "purple-drk": "#4c394e",
         "gray-pastele": "#cccccc",
+        "gray-drk": "#b1afaf",
       },
     },
   },
