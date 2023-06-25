@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <div className="border-b border-solid border-b-gray-300 py-6 bg-purple-drk">
       <div className="min-w-full ">
         <Link to="/">
-          <h1 className="text-3xl font-bold text-left text-white ml-5">
+          <h1 className="text-3xl font-bold  font-poppins text-left text-white ml-5">
             MyBooks
           </h1>
         </Link>
