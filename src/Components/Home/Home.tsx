@@ -14,8 +14,6 @@ const Home: React.FC = () => {
       <div className="">
         <Books />
       </div>
-
-      {/*pagination*/}
     </div>
   );
 };
