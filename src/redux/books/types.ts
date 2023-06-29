@@ -1,8 +1,10 @@
 export interface Book {
   id: string;
   volumeInfo: {
+    subtitle: string;
     pageCount: number;
     infoLink: string;
+    publisher: string;
     imageLinks?: {
       thumbnail: string;
     };
@@ -15,4 +17,5 @@ export interface initialProps {
   result: Book[];
   error: string | null;
   loading: boolean;
+  initialBooksLoaded: boolean;
 }
