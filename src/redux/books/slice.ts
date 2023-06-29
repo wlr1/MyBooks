@@ -7,6 +7,7 @@ const initialState: initialProps = {
   error: null,
   loading: false,
   result: [],
+  initialBooksLoaded: false,
 };
 
 const bookSlice = createSlice({

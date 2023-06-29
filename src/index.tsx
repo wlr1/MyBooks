@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Details from "./Components/Books/Details/Details";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <NotFound />,
+      },
+      {
+        path: "/details",
+        element: <Details />,
       },
     ],
   },
