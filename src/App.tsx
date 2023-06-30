@@ -52,7 +52,9 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
-      <span className=" flex justify-center">github.com/wlr1</span>
+      <div className="">
+        <span className=" flex justify-center">github.com/wlr1</span>
+      </div>
     </div>
   );
 };

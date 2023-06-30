@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Link } from "react-router-dom";
+import fetchImage from "../../assets/images/fetchError.jpg";
 
 const Books: React.FC = () => {
   const books = useSelector((state: RootState) => state.book.result);
@@ -20,7 +21,11 @@ const Books: React.FC = () => {
             <a href={book.volumeInfo.infoLink} target="_blank">
               <img
                 className="w-64 h-72 mb-2"
-                src={book.volumeInfo.imageLinks?.thumbnail}
+                src={
+                  book.volumeInfo.imageLinks
+                    ? book.volumeInfo.imageLinks.thumbnail
+                    : fetchImage
+                }
                 alt="books"
               />
             </a>
