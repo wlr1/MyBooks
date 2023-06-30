@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import fetchImage from "../../../assets/images/fetchError.jpg";
 
@@ -74,16 +74,22 @@ const Details: React.FC = () => {
       <div className="w-10/12  m-auto text-center font-lato text-xl text-purple-drk">
         {description}
       </div>
-      <div className="grid  justify-center mt-11 ">
-        <button className="py-3 px-20 gap-2 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-          Home
-        </button>
-        <button className="py-3 px-20 gap-2 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-          Preview
-        </button>
-        <button className="py-3 px-20 gap-2 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-          Info
-        </button>
+      <div className="grid gap-2 grid-cols-3 text-center mt-16">
+        <Link to="/">
+          <button className="py-3 px-40 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-m  dark:focus:ring-offset-gray-800">
+            Home
+          </button>
+        </Link>
+        <Link to={bookDetails.volumeInfo.previewLink} target="_blank">
+          <button className="py-3 px-40 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-m  dark:focus:ring-offset-gray-800">
+            Preview
+          </button>
+        </Link>
+        <Link to={bookDetails.volumeInfo.infoLink} target="_blank">
+          <button className="py-3 px-40 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato  focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-m dark:focus:ring-offset-gray-800">
+            Info
+          </button>
+        </Link>
       </div>
     </div>
   );
