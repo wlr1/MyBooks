@@ -33,11 +33,11 @@ const Books: React.FC = () => {
               <span className="ml-2 font-lato text-sm ">
                 {book.volumeInfo.publisher
                   ? `Publisher: ${book.volumeInfo.publisher}`
-                  : "No subtitle"}
+                  : "Publisher: No info"}
               </span>
             </div>
             <div className="justify-center items-center flex mb-3">
-              <Link to="/details">
+              <Link to={`/details/${book.id}`}>
                 <button className="py-3 px-11 gap-2 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
                   Details
                 </button>
