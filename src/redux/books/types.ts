@@ -3,6 +3,8 @@ export interface Book {
   volumeInfo: {
     subtitle: string;
     pageCount: number;
+    description: string;
+    authors: string[];
     infoLink: string;
     publisher: string;
     imageLinks?: {
