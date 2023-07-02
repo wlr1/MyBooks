@@ -53,7 +53,9 @@ const App: React.FC = () => {
         </div>
       )}
       <div className="">
-        <span className=" flex justify-center">github.com/wlr1</span>
+        <span className=" flex justify-center font-poppins">
+          github.com/wlr1
+        </span>
       </div>
     </div>
   );
