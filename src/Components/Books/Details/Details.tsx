@@ -77,7 +77,7 @@ const Details: React.FC = () => {
       <div className="grid gap-2 grid-cols-3 text-center mt-16">
         <Link to="/">
           <button className="py-3 px-40 rounded-md border border-transparent font-semibold bg-purple-drk text-white font-lato focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 transition-all text-m  dark:focus:ring-offset-gray-800">
-            Home
+            Back
           </button>
         </Link>
         <Link to={bookDetails.volumeInfo.previewLink} target="_blank">
