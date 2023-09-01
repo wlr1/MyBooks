@@ -1,8 +1,8 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import { Link } from "react-router-dom";
-import fetchImage from "../../assets/images/fetchError.jpg";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
+import { Link } from 'react-router-dom';
+import fetchImage from '../../assets/images/fetchError.jpg';
 
 const Books: React.FC = () => {
   const books = useSelector((state: RootState) => state.book.result);
@@ -10,7 +10,7 @@ const Books: React.FC = () => {
   const loading = useSelector((state: RootState) => state.book.loading);
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-16 px-36 py-20">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  gap-4 px-4 sm:px-6 md:px-8 lg:px-12 py-6">
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
@@ -18,7 +18,7 @@ const Books: React.FC = () => {
       ) : (
         books.map((book) => (
           <div key={book.id} className="w-64 h-auto  shadow-2xl">
-            <a href={book.volumeInfo.infoLink} target="_blank">
+            <a href={book.volumeInfo.infoLink} target="_blank" rel="noreferrer">
               <img
                 className="w-64 h-72 mb-2"
                 src={
@@ -38,7 +38,7 @@ const Books: React.FC = () => {
               <span className="ml-2 font-lato text-sm ">
                 {book.volumeInfo.publisher
                   ? `Publisher: ${book.volumeInfo.publisher}`
-                  : "Publisher: No info"}
+                  : 'Publisher: No info'}
               </span>
             </div>
             <div className="justify-center items-center flex mb-3">
